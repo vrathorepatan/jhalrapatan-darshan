@@ -1,0 +1,27 @@
+[Unit]
+Description=Jhalrapatan Darshan Stream Controller & FFmpeg Ingest Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=darshan
+WorkingDirectory=/opt/jhalrapatan-darshan/apps/stream-controller
+ExecStart=/usr/bin/node dist/index.js
+Restart=always
+RestartSec=5s
+
+# Environment configuration
+Environment=NODE_ENV=production
+EnvironmentFile=/opt/jhalrapatan-darshan/apps/stream-controller/.env
+
+# Security sandbox
+ProtectSystem=full
+ProtectHome=read-only
+NoNewPrivileges=true
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=jhalrapatan-stream
+
+[Install]
+WantedBy=multi-user.target

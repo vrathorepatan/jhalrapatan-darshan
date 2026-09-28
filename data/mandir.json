@@ -1,0 +1,59 @@
+{
+  "verify": false,
+  "name_hi": "श्री द्वारकाधीश मंदिर, झालरापाटन",
+  "name_en": "Shri Dwarkadhish Mandir, Jhalrapatan",
+  "deity": "भगवान श्री द्वारकाधीश (श्री कृष्ण)",
+  "deity_en": "Lord Shri Dwarkadhish (Lord Krishna)",
+  "established_year": null,
+  "established_verify": true,
+  "history_hi": "झालरापाटन का यह मंदिर भगवान श्री द्वारकाधीश को समर्पित है। यह राजस्थान के झालावाड़ जिले में स्थित है। मंदिर की स्थापत्य शैली और इतिहास की विस्तृत जानकारी समिति द्वारा प्रदान की जाएगी।",
+  "history_en": "This temple in Jhalrapatan is dedicated to Lord Shri Dwarkadhish. It is located in Jhalawar district of Rajasthan. Detailed history and architectural information to be confirmed by the temple committee.",
+  "history_verify": true,
+  "significance_hi": "यह मंदिर क्षेत्र के भक्तों के लिए अत्यंत महत्वपूर्ण धार्मिक स्थल है। यहाँ प्रतिदिन दर्शन के लिए दूर-दूर से श्रद्धालु आते हैं।",
+  "significance_en": "This temple is an extremely important religious site for devotees of the region. Pilgrims come from far and wide for daily darshan.",
+  "significance_verify": true,
+  "architecture_hi": "मंदिर की स्थापत्य शैली राजस्थानी परंपरा पर आधारित है। विस्तृत विवरण समिति से प्राप्त किया जाएगा।",
+  "architecture_verify": true,
+  "rules": {
+    "dress_code_hi": "मंदिर में प्रवेश के लिए शालीन वस्त्र धारण करें। छोटे कपड़े, जींस और आधुनिक पोशाक उचित नहीं है।",
+    "dress_code_en": "Wear decent attire for entry into the temple. Short clothes, jeans and modern dress are not appropriate.",
+    "photography_hi": "मंदिर के गर्भगृह में फोटोग्राफी और वीडियोग्राफी वर्जित है।",
+    "photography_en": "Photography and videography is prohibited inside the sanctum sanctorum.",
+    "footwear_hi": "मंदिर परिसर में प्रवेश से पहले जूते-चप्पल बाहर उतार दें।",
+    "footwear_en": "Remove footwear before entering the temple premises.",
+    "mobile_hi": "गर्भगृह में मोबाइल फोन का उपयोग वर्जित है।",
+    "mobile_en": "Use of mobile phones is prohibited in the sanctum.",
+    "verify": true
+  },
+  "prasad_hi": "मंदिर में प्रसाद की जानकारी समिति से प्राप्त की जाएगी।",
+  "prasad_verify": true,
+  "seva_hi": "मंदिर में सेवा के अवसरों की जानकारी के लिए मंदिर समिति से संपर्क करें।",
+  "seva_verify": true,
+  "how_to_reach": {
+    "nearest_city": "Kota",
+    "distance_from_kota_km": 85,
+    "distance_verify": true,
+    "nearest_railway_station": "Jhalawar Road (Bhawani Mandi)",
+    "railway_distance_km": 18,
+    "railway_verify": true,
+    "by_road_hi": "कोटा से झालरापाटन के लिए नियमित बस सेवा उपलब्ध है। कोटा से दूरी लगभग 85 किमी है। झालावाड़ सिटी से झालरापाटन केवल 7 किमी दूर है।",
+    "by_road_verify": true,
+    "nearest_airport": "Kota Airport (approximate, verify)",
+    "airport_verify": true,
+    "coordinates": {
+      "lat": 24.5544,
+      "lng": 76.1555,
+      "verify": true
+    }
+  },
+  "contact": {
+    "phone": null,
+    "phone_verify": true,
+    "email": null,
+    "email_verify": true,
+    "address_hi": "श्री द्वारकाधीश मंदिर, झालरापाटन, जिला झालावाड़, राजस्थान",
+    "address_en": "Shri Dwarkadhish Mandir, Jhalrapatan, District Jhalawar, Rajasthan"
+  },
+  "donation_hi": "दान और सेवा की जानकारी के लिए मंदिर समिति से संपर्क करें।",
+  "donation_verify": true
+}

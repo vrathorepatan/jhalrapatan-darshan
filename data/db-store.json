@@ -1,0 +1,174 @@
+{
+  "schedules": [
+    {
+      "season": "summer",
+      "label_hi": "ग्रीष्म कालीन समय",
+      "label_en": "Summer Schedule",
+      "validFrom": "04-01",
+      "validTo": "09-30",
+      "verify": true,
+      "slots": [
+        {
+          "id": "mangla",
+          "name_hi": "मंगला आरती",
+          "name_en": "Mangla Aarti",
+          "start": "05:30",
+          "end": "06:00",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        },
+        {
+          "id": "shringar",
+          "name_hi": "श्रृंगार आरती",
+          "name_en": "Shringar Aarti",
+          "start": "07:00",
+          "end": "08:00",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        },
+        {
+          "id": "rajbhog",
+          "name_hi": "राजभोग आरती",
+          "name_en": "Rajbhog Aarti",
+          "start": "11:30",
+          "end": "12:15",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        },
+        {
+          "id": "utthapan",
+          "name_hi": "उत्थापन आरती",
+          "name_en": "Utthapan Aarti",
+          "start": "16:30",
+          "end": "17:00",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        },
+        {
+          "id": "sandhya",
+          "name_hi": "सन्ध्या आरती",
+          "name_en": "Sandhya Aarti",
+          "start": "18:30",
+          "end": "19:15",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        },
+        {
+          "id": "shayan",
+          "name_hi": "शयन आरती",
+          "name_en": "Shayan Aarti",
+          "start": "21:00",
+          "end": "21:30",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        }
+      ]
+    },
+    {
+      "season": "winter",
+      "label_hi": "शीतकालीन समय",
+      "label_en": "Winter Schedule",
+      "validFrom": "10-01",
+      "validTo": "03-31",
+      "verify": true,
+      "slots": [
+        {
+          "id": "mangla",
+          "name_hi": "मंगला आरती",
+          "name_en": "Mangla Aarti",
+          "start": "06:00",
+          "end": "06:30",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        },
+        {
+          "id": "shringar",
+          "name_hi": "श्रृंगार आरती",
+          "name_en": "Shringar Aarti",
+          "start": "07:30",
+          "end": "08:30",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        },
+        {
+          "id": "rajbhog",
+          "name_hi": "राजभोग आरती",
+          "name_en": "Rajbhog Aarti",
+          "start": "11:30",
+          "end": "12:15",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        },
+        {
+          "id": "utthapan",
+          "name_hi": "उत्थापन आरती",
+          "name_en": "Utthapan Aarti",
+          "start": "16:00",
+          "end": "16:30",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        },
+        {
+          "id": "sandhya",
+          "name_hi": "सन्ध्या आरती",
+          "name_en": "Sandhya Aarti",
+          "start": "18:00",
+          "end": "18:45",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        },
+        {
+          "id": "shayan",
+          "name_hi": "शयन आरती",
+          "name_en": "Shayan Aarti",
+          "start": "20:30",
+          "end": "21:00",
+          "enabled": true,
+          "startOffsetMin": 5,
+          "verify": true
+        }
+      ]
+    }
+  ],
+  "overrides": [],
+  "closures": [],
+  "announcements": [
+    {
+      "id": "default-announcement-1",
+      "message_hi": "श्री द्वारकाधीश मंदिर में आपका स्वागत है। दर्शन आरती अनुसार प्रसारित किए जाते हैं।",
+      "message_en": "Welcome to Shri Dwarkadhish Mandir. Darshan is streamed during Aarti hours.",
+      "startsAt": "2026-09-27T11:30:05.253Z",
+      "endsAt": "2026-10-28T11:30:05.254Z",
+      "active": true
+    }
+  ],
+  "heartbeat": {
+    "ingestConnected": true,
+    "bitrate": 2850,
+    "uptime": 3600,
+    "receivedAt": "2026-09-28T11:30:05.254Z",
+    "isManualLive": false
+  },
+  "auditLogs": [
+    {
+      "id": "init-1",
+      "action": "INITIALIZE",
+      "entity": "SYSTEM",
+      "details": "Database store initialized with default schedules.",
+      "actor": "system",
+      "createdAt": "2026-09-28T11:30:05.254Z"
+    }
+  ],
+  "pushSubscriptions": []
+}

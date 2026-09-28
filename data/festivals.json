@@ -1,0 +1,101 @@
+[
+  {
+    "id": "janmashtami",
+    "name_hi": "जन्माष्टमी",
+    "name_en": "Janmashtami",
+    "tithi": "Bhadrapada Krishna Ashtami",
+    "month_approx": 8,
+    "description_hi": "भगवान श्री कृष्ण का जन्मोत्सव। मध्यरात्रि में विशेष पूजा और आरती होती है। मंदिर में विशेष सजावट और कार्यक्रम होते हैं।",
+    "description_en": "Birthday celebration of Lord Shri Krishna. Special puja and aarti at midnight. Special decorations and programmes at the temple.",
+    "mandir_programme_hi": "विशेष श्रृंगार, मध्यरात्रि पूजा, झाँकी – समिति से विस्तृत कार्यक्रम प्राप्त करें।",
+    "verify": true
+  },
+  {
+    "id": "annakut",
+    "name_hi": "अन्नकूट (गोवर्धन पूजा)",
+    "name_en": "Annakut (Govardhan Puja)",
+    "tithi": "Kartik Shukla Pratipada",
+    "month_approx": 10,
+    "description_hi": "दीपावली के अगले दिन अन्नकूट महोत्सव मनाया जाता है। भगवान को विशाल भोग लगाया जाता है।",
+    "description_en": "Annakut festival is celebrated the day after Diwali. A grand feast is offered to the Lord.",
+    "mandir_programme_hi": "विशाल भोग, प्रसाद वितरण – समिति से विस्तृत जानकारी प्राप्त करें।",
+    "verify": true
+  },
+  {
+    "id": "holi_fagotsav",
+    "name_hi": "होली / फागोत्सव",
+    "name_en": "Holi / Fagotsav",
+    "tithi": "Phalgun Purnima",
+    "month_approx": 3,
+    "description_hi": "वृंदावन की तरह यहाँ भी फागोत्सव मनाया जाता है। भगवान के साथ रंग खेला जाता है।",
+    "description_en": "Fagotsav is celebrated here similar to Vrindavan. Colors are played with the Lord.",
+    "mandir_programme_hi": "फाग उत्सव, विशेष आरती – समिति से विस्तृत कार्यक्रम प्राप्त करें।",
+    "verify": true
+  },
+  {
+    "id": "ram_navami",
+    "name_hi": "राम नवमी",
+    "name_en": "Ram Navami",
+    "tithi": "Chaitra Shukla Navami",
+    "month_approx": 4,
+    "description_hi": "भगवान राम के जन्मोत्सव पर विशेष कार्यक्रम।",
+    "description_en": "Special programmes on the birthday of Lord Ram.",
+    "mandir_programme_hi": "विशेष पूजा – समिति से जानकारी प्राप्त करें।",
+    "verify": true
+  },
+  {
+    "id": "deepawali",
+    "name_hi": "दीपावली",
+    "name_en": "Deepawali",
+    "tithi": "Kartik Krishna Amavasya",
+    "month_approx": 10,
+    "description_hi": "दीपावली पर मंदिर को दीपों से सजाया जाता है। विशेष आरती और लक्ष्मी पूजन होता है।",
+    "description_en": "The temple is decorated with lamps on Diwali. Special aarti and Lakshmi puja takes place.",
+    "mandir_programme_hi": "दीप सज्जा, विशेष आरती – समिति से विस्तृत कार्यक्रम प्राप्त करें।",
+    "verify": true
+  },
+  {
+    "id": "basant_panchami",
+    "name_hi": "बसंत पंचमी",
+    "name_en": "Basant Panchami",
+    "tithi": "Magha Shukla Panchami",
+    "month_approx": 2,
+    "description_hi": "बसंत पंचमी पर मंदिर में पीले रंग की विशेष सजावट और पूजा होती है।",
+    "description_en": "The temple has special yellow decorations and puja on Basant Panchami.",
+    "mandir_programme_hi": "विशेष श्रृंगार – समिति से जानकारी प्राप्त करें।",
+    "verify": true
+  },
+  {
+    "id": "ekadashi",
+    "name_hi": "एकादशी",
+    "name_en": "Ekadashi",
+    "tithi": "Every Ekadashi (Shukla & Krishna Paksha)",
+    "month_approx": null,
+    "description_hi": "प्रत्येक एकादशी को मंदिर में विशेष दर्शन और पूजा होती है। भक्त व्रत रखते हैं।",
+    "description_en": "Special darshan and puja takes place on every Ekadashi. Devotees observe fast.",
+    "mandir_programme_hi": "विशेष दर्शन – समिति से जानकारी प्राप्त करें।",
+    "verify": true
+  },
+  {
+    "id": "purnima",
+    "name_hi": "पूर्णिमा",
+    "name_en": "Purnima",
+    "tithi": "Every Purnima",
+    "month_approx": null,
+    "description_hi": "पूर्णिमा पर विशेष दर्शन और आरती।",
+    "description_en": "Special darshan and aarti on Purnima.",
+    "mandir_programme_hi": "विशेष आरती – समिति से जानकारी प्राप्त करें।",
+    "verify": true
+  },
+  {
+    "id": "sharad_purnima",
+    "name_hi": "शरद पूर्णिमा",
+    "name_en": "Sharad Purnima",
+    "tithi": "Ashwin Purnima",
+    "month_approx": 10,
+    "description_hi": "शरद पूर्णिमा पर भगवान को खीर का भोग लगाया जाता है। विशेष रास लीला का आयोजन होता है।",
+    "description_en": "Kheer is offered to the Lord on Sharad Purnima. Special Raas Leela is organized.",
+    "mandir_programme_hi": "खीर भोग, रास लीला – समिति से विस्तृत जानकारी प्राप्त करें।",
+    "verify": true
+  }
+]
