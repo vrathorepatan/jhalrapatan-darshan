@@ -27,19 +27,21 @@ export default function TimingsPage() {
 
       <div
         style={{
-          background: "rgba(232,112,42,0.1)",
-          border: "1px solid rgba(232,112,42,0.3)",
+          background: "#FFF7ED",
+          border: "1.5px solid #FED7AA",
           borderRadius: "var(--radius-md)",
           padding: "0.75rem 1rem",
           marginBottom: "1.5rem",
-          fontSize: "0.85rem",
-          color: "var(--color-saffron)",
+          fontSize: "0.88rem",
+          color: "var(--color-heading)",
           display: "flex",
-          gap: "0.5rem",
+          alignItems: "center",
+          gap: "0.6rem",
+          fontWeight: 500,
         }}
         role="alert"
       >
-        <span>⚠️</span>
+        <span style={{ fontSize: "1.1rem" }}>⚠️</span>
         <span>
           नीचे दिए समय अनुमानित हैं। कृपया मंदिर समिति से पुष्टि करें।
         </span>

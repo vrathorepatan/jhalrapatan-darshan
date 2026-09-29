@@ -32,7 +32,7 @@ export async function GET() {
           id: liveState.currentSlot.id,
           name_hi: liveState.currentSlot.name_hi,
           name_en: liveState.currentSlot.name_en,
-          endsAt: liveState.currentSlot.end,
+          endsAt: liveState.currentSlot.endsAt,
         }
       : null;
 

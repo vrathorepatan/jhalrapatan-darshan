@@ -30,8 +30,9 @@ export function UtsavStrip() {
             <p
               className="text-hindi"
               style={{
-                fontSize: "0.9rem",
-                color: "#F5D87E",
+                fontSize: "0.95rem",
+                color: "var(--color-heading)",
+                fontWeight: 700,
                 marginBottom: "0.25rem",
                 lineHeight: 1.3,
               }}

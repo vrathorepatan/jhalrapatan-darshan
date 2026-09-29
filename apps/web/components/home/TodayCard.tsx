@@ -58,7 +58,7 @@ export function TodayCard() {
           }}
         >
           <div>
-            <p className="text-hindi" style={{ fontSize: "1.1rem", color: "#F5D87E" }}>
+            <p className="text-hindi" style={{ fontSize: "1.15rem", color: "var(--color-heading)", fontWeight: 700 }}>
               {weekday}, {day} {month} {year}
             </p>
             <p className="text-muted" style={{ fontSize: "0.8rem", marginTop: "0.15rem" }}>

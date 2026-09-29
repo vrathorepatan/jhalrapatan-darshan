@@ -37,14 +37,15 @@ export default function UtsavPage() {
           marginBottom: "1.5rem",
           textAlign: "center",
           padding: "2rem 1rem",
-          background: "linear-gradient(135deg, #0E1030, #131640)",
+          background: "linear-gradient(135deg, #FFF9F0 0%, #FEF3C7 100%)",
+          border: "1.5px solid #FDE68A",
         }}
       >
         <p style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>🗓️</p>
-        <p className="text-hindi" style={{ color: "#F5D87E", fontSize: "1.05rem" }}>
+        <p className="text-hindi" style={{ color: "var(--color-heading)", fontSize: "1.1rem", fontWeight: 700 }}>
           तिथि कैलेंडर
         </p>
-        <p className="text-muted" style={{ fontSize: "0.8rem", marginTop: "0.5rem" }}>
+        <p style={{ fontSize: "0.85rem", color: "var(--color-text-secondary)", marginTop: "0.4rem" }}>
           हिंदू तिथि कैलेंडर शीघ्र उपलब्ध होगा
         </p>
         <span className="chip chip-verify" style={{ marginTop: "0.75rem" }}>
@@ -85,7 +86,7 @@ export default function UtsavPage() {
                   >
                     <h3
                       className="text-hindi"
-                      style={{ fontSize: "1.05rem", color: "#F5D87E", margin: 0 }}
+                      style={{ fontSize: "1.1rem", color: "var(--color-heading)", fontWeight: 700, margin: 0 }}
                     >
                       {festival.name_hi}
                     </h3>
@@ -104,11 +105,12 @@ export default function UtsavPage() {
                       style={{
                         marginTop: "0.5rem",
                         padding: "0.5rem 0.75rem",
-                        background: "rgba(201,168,76,0.08)",
-                        borderLeft: "3px solid var(--color-gold-dim)",
+                        background: "var(--color-bg-subtle)",
+                        borderLeft: "3px solid var(--color-saffron)",
                         borderRadius: "0 var(--radius-sm) var(--radius-sm) 0",
-                        fontSize: "0.82rem",
-                        color: "#C9A84C",
+                        fontSize: "0.85rem",
+                        color: "var(--color-heading)",
+                        fontWeight: 500,
                       }}
                     >
                       {festival.mandir_programme_hi}

@@ -44,7 +44,8 @@ export default async function TempleDetailPage({ params }: Props) {
           borderRadius: "var(--radius-lg)",
           overflow: "hidden",
           marginBottom: "1.25rem",
-          background: "linear-gradient(135deg, #0E1030, #131640)",
+          background: "linear-gradient(135deg, #FFF7ED 0%, #FEF3C7 100%)",
+          border: "1.5px solid #FDE68A",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -70,7 +71,7 @@ export default async function TempleDetailPage({ params }: Props) {
         </p>
         {temple.deity_hi && (
           <p className="text-muted" style={{ fontSize: "0.85rem", marginTop: "0.25rem" }}>
-            🙏 देवता: <span style={{ color: "#C9A84C" }}>{temple.deity_hi}</span>
+            🙏 देवता: <span style={{ color: "var(--color-heading)", fontWeight: 700 }}>{temple.deity_hi}</span>
           </p>
         )}
         <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.75rem", flexWrap: "wrap" }}>

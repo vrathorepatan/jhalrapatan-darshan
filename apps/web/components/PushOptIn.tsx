@@ -46,7 +46,7 @@ export function PushOptIn() {
 
       {isIOS ? (
         <div>
-          <p className="text-hindi" style={{ color: "#F5D87E", marginBottom: "0.5rem" }}>
+          <p className="text-hindi" style={{ color: "var(--color-heading)", fontWeight: 700, marginBottom: "0.5rem" }}>
             iPhone पर सूचना पाने के लिए:
           </p>
           <ol
@@ -58,8 +58,8 @@ export function PushOptIn() {
               lineHeight: 2,
             }}
           >
-            <li>Safari में नीचे <strong style={{ color: "#C9A84C" }}>Share</strong> बटन दबाएं</li>
-            <li>&ldquo;<strong style={{ color: "#C9A84C" }}>Add to Home Screen</strong>&rdquo; चुनें</li>
+            <li>Safari में नीचे <strong style={{ color: "var(--color-saffron)" }}>Share</strong> बटन दबाएं</li>
+            <li>&ldquo;<strong style={{ color: "var(--color-saffron)" }}>Add to Home Screen</strong>&rdquo; चुनें</li>
             <li>Home Screen से ऐप खोलें और फिर सूचना चालू करें</li>
           </ol>
         </div>
@@ -69,7 +69,7 @@ export function PushOptIn() {
         </p>
       ) : (
         <div>
-          <p className="text-hindi" style={{ color: "#F5D87E", marginBottom: "0.35rem" }}>
+          <p className="text-hindi" style={{ color: "var(--color-heading)", fontSize: "1.15rem", fontWeight: 700, marginBottom: "0.35rem" }}>
             दर्शन की सूचना पाएं
           </p>
           <p className="text-muted" style={{ fontSize: "0.8rem", marginBottom: "1rem" }}>

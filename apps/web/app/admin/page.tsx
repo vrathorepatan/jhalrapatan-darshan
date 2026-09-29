@@ -146,9 +146,9 @@ export default function AdminDashboardPage() {
         className="card"
         style={{
           marginBottom: "1.5rem",
-          border: status?.isLive ? "1px solid #FF4444" : "1px solid var(--color-border)",
+          border: status?.isLive ? "1.5px solid #EF4444" : "1px solid var(--color-border)",
           background: status?.isLive
-            ? "linear-gradient(135deg, rgba(255,68,68,0.1), rgba(14,16,48,0.8))"
+            ? "linear-gradient(135deg, #FEF2F2, #FFF7ED)"
             : "var(--color-bg-card)",
         }}
       >

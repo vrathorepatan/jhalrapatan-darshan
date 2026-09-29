@@ -4,8 +4,8 @@
   "description": "श्री द्वारकाधीश मंदिर, झालरापाटन – लाइव दर्शन और आरती सूचना",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#07081A",
-  "theme_color": "#07081A",
+  "background_color": "#FDFBF7",
+  "theme_color": "#E65100",
   "orientation": "portrait",
   "lang": "hi",
   "icons": [

@@ -7,8 +7,8 @@ interface Temple {
   slug: string;
   name_hi: string;
   name_en: string;
-  deity_hi: string;
-  deity_en: string;
+  deity_hi: string | null;
+  deity_en: string | null;
   type: string;
   description_hi: string;
   description_en: string;
@@ -46,7 +46,7 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
         !search ||
         t.name_hi.toLowerCase().includes(q) ||
         t.name_en.toLowerCase().includes(q) ||
-        t.deity_hi.toLowerCase().includes(q) ||
+        (t.deity_hi ? t.deity_hi.toLowerCase().includes(q) : false) ||
         t.description_hi.toLowerCase().includes(q);
 
       return matchesType && matchesSearch;
@@ -60,8 +60,8 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
         className="card"
         style={{
           marginBottom: "1.5rem",
-          background: "rgba(14,16,48,0.7)",
-          borderColor: "rgba(201,168,76,0.25)",
+          background: "var(--color-bg-card)",
+          borderColor: "var(--color-bg-border)",
         }}
       >
         <div
@@ -96,7 +96,7 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
                 width: "100%",
                 padding: "0.75rem 1rem 0.75rem 2.5rem",
                 background: "var(--color-bg-primary)",
-                border: "1px solid var(--color-border)",
+                border: "1.5px solid var(--color-border)",
                 borderRadius: "var(--radius-md)",
                 color: "var(--color-text-primary)",
                 fontSize: "0.95rem",
@@ -126,15 +126,29 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
           <div style={{ display: "flex", gap: "0.5rem" }}>
             <button
               onClick={() => setViewMode("grid")}
-              className={`chip ${viewMode === "grid" ? "chip-gold" : ""}`}
-              style={{ cursor: "pointer", padding: "0.5rem 1rem" }}
+              className={`chip`}
+              style={{
+                cursor: "pointer",
+                padding: "0.5rem 1rem",
+                background: viewMode === "grid" ? "var(--color-saffron)" : "var(--color-bg-subtle)",
+                color: viewMode === "grid" ? "#FFFFFF" : "var(--color-text-primary)",
+                border: viewMode === "grid" ? "1.5px solid var(--color-saffron)" : "1px solid var(--color-bg-border)",
+                fontWeight: viewMode === "grid" ? 700 : 500,
+              }}
             >
               📋 सूची दृश्य
             </button>
             <button
               onClick={() => setViewMode("map")}
-              className={`chip ${viewMode === "map" ? "chip-gold" : ""}`}
-              style={{ cursor: "pointer", padding: "0.5rem 1rem" }}
+              className={`chip`}
+              style={{
+                cursor: "pointer",
+                padding: "0.5rem 1rem",
+                background: viewMode === "map" ? "var(--color-saffron)" : "var(--color-bg-subtle)",
+                color: viewMode === "map" ? "#FFFFFF" : "var(--color-text-primary)",
+                border: viewMode === "map" ? "1.5px solid var(--color-saffron)" : "1px solid var(--color-bg-border)",
+                fontWeight: viewMode === "map" ? 700 : 500,
+              }}
             >
               🗺️ नक्शा देखें
             </button>
@@ -155,14 +169,16 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
             <button
               key={key}
               onClick={() => setSelectedType(key)}
-              className={`chip ${selectedType === key ? "chip-gold" : ""}`}
+              className={`chip`}
               style={{
                 cursor: "pointer",
-                background: selectedType === key ? "var(--color-gold-light)" : "rgba(255,255,255,0.05)",
-                color: selectedType === key ? "#0A0B1E" : "var(--color-text-primary)",
-                fontWeight: selectedType === key ? 600 : 400,
+                background: selectedType === key ? "var(--color-saffron)" : "var(--color-bg-subtle)",
+                color: selectedType === key ? "#FFFFFF" : "var(--color-text-primary)",
+                border: selectedType === key ? "1.5px solid var(--color-saffron)" : "1px solid var(--color-bg-border)",
+                fontWeight: selectedType === key ? 700 : 500,
                 whiteSpace: "nowrap",
                 fontSize: "0.85rem",
+                padding: "0.35rem 0.85rem",
               }}
             >
               <span>{config.icon}</span> {config.label}
@@ -176,20 +192,20 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
         className="card"
         style={{
           marginBottom: "1.5rem",
-          background: "linear-gradient(135deg, rgba(201,168,76,0.12), rgba(232,112,42,0.12))",
-          border: "1px solid rgba(201,168,76,0.35)",
+          background: "linear-gradient(135deg, #FFF7ED 0%, #FEF3C7 100%)",
+          border: "1.5px solid #FDE68A",
         }}
       >
         <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
           <span style={{ fontSize: "1.8rem" }}>🚩</span>
           <div>
-            <h3 style={{ fontSize: "1.05rem", color: "var(--color-gold-light)", marginBottom: "0.3rem" }}>
+            <h3 style={{ fontSize: "1.1rem", color: "var(--color-heading)", fontWeight: 700, marginBottom: "0.3rem" }}>
               एक दिवसीय झालरापाटन दर्शन यात्रा (Suggested Temple Trail)
             </h3>
-            <p className="text-secondary" style={{ fontSize: "0.85rem", lineHeight: 1.6, marginBottom: "0.5rem" }}>
+            <p className="text-secondary" style={{ fontSize: "0.88rem", lineHeight: 1.6, marginBottom: "0.5rem" }}>
               <b>क्रम:</b> द्वारकाधीश मंदिर (प्रस्थान) → सूर्य मंदिर (300 मी.) → शांतिनाथ जैन मंदिर (600 मी.) → शीतलेश्वर महादेव (800 मी.) → चंद्रभागा घाट पर संध्या आरती (1.2 किमी)।
             </p>
-            <div style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>
+            <div style={{ fontSize: "0.78rem", color: "var(--color-text-muted)" }}>
               🚶 संपूर्ण यात्रा लगभग 2.5 किमी पैदल अथवा ई-रिक्शा द्वारा 3-4 घंटे में सुगमता से संपन्न की जा सकती है।
             </div>
           </div>
@@ -199,10 +215,10 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
       {/* Map View */}
       {viewMode === "map" && (
         <div className="card" style={{ marginBottom: "2rem", padding: "1rem" }}>
-          <h3 style={{ fontSize: "1.1rem", marginBottom: "0.75rem", color: "var(--color-gold-light)" }}>
+          <h3 style={{ fontSize: "1.15rem", marginBottom: "0.75rem", color: "var(--color-heading)", fontWeight: 700 }}>
             झालरापाटन तीर्थ मानचित्र (Interactive Map)
           </h3>
-          <p className="text-secondary" style={{ fontSize: "0.8rem", marginBottom: "1rem" }}>
+          <p className="text-secondary" style={{ fontSize: "0.85rem", marginBottom: "1rem" }}>
             मंदिर के पिन पर क्लिक करें अथवा नीचे सूची में से चुनें:
           </p>
 
@@ -212,7 +228,7 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
               height: "360px",
               borderRadius: "var(--radius-md)",
               overflow: "hidden",
-              border: "1px solid var(--color-border)",
+              border: "1.5px solid var(--color-border)",
               marginBottom: "1rem",
             }}
           >
@@ -228,7 +244,7 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
               src={`https://www.openstreetmap.org/export/embed.html?bbox=76.1400%2C24.5450%2C76.1680%2C24.5620&layer=mapnik&marker=${
                 activePin?.coordinates.lat || 24.5544
               }%2C${activePin?.coordinates.lng || 76.1555}`}
-              style={{ border: 0, filter: "brightness(0.9) contrast(1.1)" }}
+              style={{ border: 0 }}
             />
           </div>
 
@@ -236,8 +252,8 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
           {activePin && (
             <div
               style={{
-                background: "rgba(10,11,30,0.85)",
-                border: "1px solid rgba(201,168,76,0.3)",
+                background: "var(--color-bg-subtle)",
+                border: "1.5px solid #FED7AA",
                 borderRadius: "var(--radius-md)",
                 padding: "1rem",
                 display: "flex",
@@ -248,7 +264,7 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
               }}
             >
               <div>
-                <h4 style={{ fontSize: "1.05rem", color: "#F5D87E", margin: 0 }}>
+                <h4 style={{ fontSize: "1.1rem", color: "var(--color-heading)", fontWeight: 700, margin: 0 }}>
                   {activePin.name_hi}
                 </h4>
                 <p className="text-secondary" style={{ fontSize: "0.85rem", margin: "0.25rem 0" }}>
@@ -262,8 +278,8 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
               <div style={{ display: "flex", gap: "0.5rem" }}>
                 <Link
                   href={`/temples/${activePin.slug}`}
-                  className="btn btn-secondary"
-                  style={{ fontSize: "0.85rem", padding: "0.4rem 0.8rem" }}
+                  className="btn-secondary"
+                  style={{ fontSize: "0.85rem", padding: "0.45rem 0.9rem" }}
                 >
                   विस्तार देखें
                 </Link>
@@ -271,8 +287,8 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
                   href={activePin.google_maps_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary"
-                  style={{ fontSize: "0.85rem", padding: "0.4rem 0.8rem" }}
+                  className="btn-primary"
+                  style={{ fontSize: "0.85rem", padding: "0.45rem 0.9rem" }}
                 >
                   मार्ग (Directions) ↗
                 </a>
@@ -289,9 +305,10 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
                 className="chip"
                 style={{
                   cursor: "pointer",
-                  background: activePin?.slug === t.slug ? "var(--color-gold)" : "rgba(255,255,255,0.08)",
-                  color: activePin?.slug === t.slug ? "#0A0B1E" : "var(--color-text-primary)",
-                  fontWeight: activePin?.slug === t.slug ? 700 : 400,
+                  background: activePin?.slug === t.slug ? "var(--color-saffron)" : "var(--color-bg-subtle)",
+                  color: activePin?.slug === t.slug ? "#FFFFFF" : "var(--color-text-primary)",
+                  border: activePin?.slug === t.slug ? "1.5px solid var(--color-saffron)" : "1px solid var(--color-border)",
+                  fontWeight: activePin?.slug === t.slug ? 700 : 500,
                   fontSize: "0.8rem",
                 }}
               >
@@ -334,7 +351,7 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
                   <div
                     style={{
                       height: "120px",
-                      background: "linear-gradient(135deg, #0F1238, #1E1945)",
+                      background: "linear-gradient(135deg, #FFF7ED 0%, #FEF3C7 100%)",
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
@@ -359,11 +376,14 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
                         position: "absolute",
                         top: "0.6rem",
                         right: "0.6rem",
-                        background: "rgba(10,11,30,0.8)",
-                        padding: "0.2rem 0.5rem",
+                        background: "#FFFFFF",
+                        border: "1px solid #FED7AA",
+                        padding: "0.2rem 0.6rem",
                         borderRadius: "var(--radius-sm)",
-                        fontSize: "0.7rem",
-                        color: "var(--color-gold-light)",
+                        fontSize: "0.72rem",
+                        fontWeight: 600,
+                        color: "var(--color-saffron)",
+                        boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
                       }}
                     >
                       {temple.distance_from_main_km === 0
@@ -373,31 +393,32 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
                   </div>
 
                   {/* Temple Body */}
-                  <div style={{ padding: "1rem", flex: 1, display: "flex", flexDirection: "column" }}>
+                  <div style={{ padding: "1.1rem", flex: 1, display: "flex", flexDirection: "column" }}>
                     <div style={{ marginBottom: "0.4rem" }}>
                       <h3
                         style={{
                           fontSize: "1.1rem",
                           marginBottom: "0.2rem",
-                          color: "var(--color-gold-light)",
+                          color: "var(--color-heading)",
+                          fontWeight: 700,
                         }}
                       >
                         {temple.name_hi}
                       </h3>
-                      <div className="text-secondary" style={{ fontSize: "0.75rem" }}>
+                      <div className="text-secondary" style={{ fontSize: "0.78rem" }}>
                         {temple.name_en}
                       </div>
                     </div>
 
-                    <div style={{ fontSize: "0.85rem", color: "var(--color-saffron)", marginBottom: "0.5rem" }}>
+                    <div style={{ fontSize: "0.85rem", color: "var(--color-saffron)", fontWeight: 600, marginBottom: "0.5rem" }}>
                       देवता: {temple.deity_hi}
                     </div>
 
                     <p
                       className="text-secondary"
                       style={{
-                        fontSize: "0.8rem",
-                        lineHeight: 1.5,
+                        fontSize: "0.82rem",
+                        lineHeight: 1.55,
                         flex: 1,
                         marginBottom: "0.75rem",
                       }}
@@ -412,13 +433,13 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
                         display: "flex",
                         justifyContent: "space-between",
                         alignItems: "center",
-                        borderTop: "1px solid rgba(255,255,255,0.06)",
-                        paddingTop: "0.6rem",
+                        borderTop: "1px solid #F3E8D8",
+                        paddingTop: "0.7rem",
                         fontSize: "0.75rem",
                       }}
                     >
                       <span className="text-muted">{temple.timings_hi.slice(0, 24)}...</span>
-                      <span style={{ color: "var(--color-gold-light)", fontWeight: 600 }}>
+                      <span style={{ color: "var(--color-saffron)", fontWeight: 700 }}>
                         विवरण पढ़ें →
                       </span>
                     </div>

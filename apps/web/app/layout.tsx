@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "default",
     title: "झालरापाटन दर्शन",
   },
   openGraph: {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#07081A",
+  themeColor: "#E65100",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
