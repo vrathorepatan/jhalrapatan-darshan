@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { BottomNav } from "@/components/BottomNav";
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -73,6 +74,7 @@ export default function RootLayout({
         <div className="page-shell">
           <AnnouncementBanner />
           <main>{children}</main>
+          <Footer />
         </div>
         <BottomNav />
       </body>
