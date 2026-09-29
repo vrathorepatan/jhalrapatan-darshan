@@ -350,27 +350,37 @@ export default function TempleDirectory({ temples }: { temples: Temple[] }) {
                   {/* Temple Card Header / Banner */}
                   <div
                     style={{
-                      height: "120px",
-                      background: "linear-gradient(135deg, #FFF7ED 0%, #FEF3C7 100%)",
+                      height: "140px",
+                      background: temple.photo ? "#1C1917" : "linear-gradient(135deg, #FFF7ED 0%, #FEF3C7 100%)",
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
                       justifyContent: "center",
                       borderBottom: "1px solid var(--color-border)",
                       position: "relative",
+                      overflow: "hidden",
                     }}
                   >
-                    <span style={{ fontSize: "2.8rem" }}>
-                      {temple.type === "vaishnav"
-                        ? "🛕"
-                        : temple.type === "shaiv" || temple.type === "shaiv_or_other"
-                        ? "🔱"
-                        : temple.type === "jain"
-                        ? "🕉️"
-                        : temple.type === "ghat"
-                        ? "🌊"
-                        : "🏛️"}
-                    </span>
+                    {temple.photo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={temple.photo}
+                        alt={temple.name_hi}
+                        style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }}
+                      />
+                    ) : (
+                      <span style={{ fontSize: "2.8rem" }}>
+                        {temple.type === "vaishnav"
+                          ? "🛕"
+                          : temple.type === "shaiv" || temple.type === "shaiv_or_other"
+                          ? "🔱"
+                          : temple.type === "jain"
+                          ? "🕉️"
+                          : temple.type === "ghat"
+                          ? "🌊"
+                          : "🏛️"}
+                      </span>
+                    )}
                     <span
                       style={{
                         position: "absolute",

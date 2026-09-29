@@ -51,16 +51,28 @@ export default async function TempleDetailPage({ params }: Props) {
           justifyContent: "center",
           flexDirection: "column",
           gap: "0.5rem",
+          position: "relative",
         }}
       >
-        <span style={{ fontSize: "4rem" }}>
-          {temple.type === "vaishnav" ? "🛕" :
-           temple.type === "shaiv" || temple.type === "shaiv_or_other" ? "🔱" :
-           temple.type === "jain" ? "🕉️" :
-           temple.type === "ghat" ? "🌊" : "🏛️"}
-        </span>
-        {temple.photo_verify && (
-          <span className="chip chip-verify">फोटो शीघ्र उपलब्ध होगा</span>
+        {temple.photo ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={temple.photo}
+            alt={temple.name_hi}
+            style={{ width: "100%", height: "100%", objectFit: "contain", background: "#1F1914" }}
+          />
+        ) : (
+          <>
+            <span style={{ fontSize: "4rem" }}>
+              {temple.type === "vaishnav" ? "🛕" :
+               temple.type === "shaiv" || temple.type === "shaiv_or_other" ? "🔱" :
+               temple.type === "jain" ? "🕉️" :
+               temple.type === "ghat" ? "🌊" : "🏛️"}
+            </span>
+            {temple.photo_verify && (
+              <span className="chip chip-verify">फोटो शीघ्र उपलब्ध होगा</span>
+            )}
+          </>
         )}
       </div>
 

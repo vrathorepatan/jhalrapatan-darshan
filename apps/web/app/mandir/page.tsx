@@ -41,12 +41,66 @@ export default function MandirPage() {
 
   return (
     <div className="container" style={{ paddingTop: "1.5rem" }}>
-      <header style={{ marginBottom: "1.5rem" }}>
+      <header style={{ marginBottom: "1.25rem" }}>
         <h1 style={{ marginBottom: "0.25rem" }}>{mandirData.name_hi}</h1>
         <p className="text-secondary" style={{ fontSize: "0.875rem" }}>
           {mandirData.contact.address_hi}
         </p>
       </header>
+
+      {/* Sacred Mandir Idol Photo Hero */}
+      <div
+        className="card"
+        style={{
+          padding: "0.85rem",
+          marginBottom: "1.5rem",
+          display: "flex",
+          alignItems: "center",
+          gap: "1.25rem",
+          background: "linear-gradient(135deg, #FFF7ED 0%, #FEF3C7 100%)",
+          border: "1.5px solid #FDE68A",
+        }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/dwarkadhish.jpg"
+          alt="श्री द्वारकाधीश जी, झालरापाटन"
+          style={{
+            width: "110px",
+            height: "140px",
+            objectFit: "cover",
+            objectPosition: "top center",
+            borderRadius: "var(--radius-md)",
+            border: "2px solid #F59E0B",
+            boxShadow: "0 4px 14px rgba(230,81,0,0.2)",
+            flexShrink: 0,
+            background: "#1C1914",
+          }}
+        />
+        <div>
+          <span
+            style={{
+              background: "#FFFFFF",
+              color: "var(--color-saffron)",
+              border: "1px solid #FED7AA",
+              fontSize: "0.72rem",
+              fontWeight: 700,
+              padding: "0.2rem 0.6rem",
+              borderRadius: "9999px",
+              display: "inline-block",
+              marginBottom: "0.4rem",
+            }}
+          >
+            🛕 प्रमुख विग्रह दर्शन
+          </span>
+          <h2 style={{ fontSize: "1.2rem", color: "var(--color-heading)", fontWeight: 700, margin: "0 0 0.3rem" }}>
+            भगवान श्री द्वारकाधीश जी
+          </h2>
+          <p className="text-secondary" style={{ fontSize: "0.85rem", lineHeight: 1.5, margin: 0 }}>
+            झालरापाटन के अधिष्ठाता देव, चतुर्भुज स्वरूप भगवान श्री द्वारकाधीश जी के दिव्य विग्रह के पावन दर्शन।
+          </p>
+        </div>
+      </div>
 
       {/* Significance */}
       <section aria-labelledby="significance-heading" style={{ marginBottom: "1.5rem" }}>

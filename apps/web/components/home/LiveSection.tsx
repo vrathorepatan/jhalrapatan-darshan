@@ -131,76 +131,114 @@ export function LiveSection() {
               style={{ width: "100%", height: "100%", border: "none" }}
             />
           ) : (
-            <div className="player-offline-overlay">
-              {/* Sacred Diya with Auspicious Flame */}
-              <svg
-                width="72"
-                height="72"
-                viewBox="0 0 72 72"
-                fill="none"
-                aria-hidden="true"
-                className="animate-diya"
+            <div className="player-offline-overlay" style={{ padding: "1rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "1.25rem",
+                  width: "100%",
+                  maxWidth: "480px",
+                }}
               >
-                {/* Diya Base Shadow */}
-                <ellipse cx="36" cy="56" rx="22" ry="7" fill="#E651001A" />
-                {/* Brass Diya Body */}
-                <path
-                  d="M18 46 Q22 34 36 32 Q50 34 54 46 Q46 54 36 54 Q26 54 18 46Z"
-                  fill="url(#diya-brass)"
-                />
-                <ellipse cx="36" cy="35" rx="14" ry="4" fill="#B45309" opacity="0.6" />
-                {/* Flame with Animation */}
-                <g className="animate-flame">
-                  <path
-                    d="M36 32 C31 24, 30 18, 36 8 C42 18, 41 24, 36 32 Z"
-                    fill="url(#sacred-flame-outer)"
+                {/* Dwarkadhish Ji Divine Photo Frame */}
+                <div
+                  style={{
+                    position: "relative",
+                    width: "105px",
+                    height: "135px",
+                    borderRadius: "var(--radius-md)",
+                    overflow: "hidden",
+                    border: "2.5px solid #F59E0B",
+                    boxShadow: "0 6px 20px rgba(230,81,0,0.25)",
+                    flexShrink: 0,
+                    background: "#1C1914",
+                  }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/dwarkadhish.jpg"
+                    alt="श्री द्वारकाधीश जी के दर्शन"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }}
                   />
-                  <path
-                    d="M36 31 C33 25, 33 21, 36 14 C39 21, 39 25, 36 31 Z"
-                    fill="url(#sacred-flame-inner)"
-                  />
-                </g>
-                <defs>
-                  <linearGradient id="diya-brass" x1="18" y1="32" x2="54" y2="54" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#F59E0B" />
-                    <stop offset="0.5" stopColor="#D97706" />
-                    <stop offset="1" stopColor="#92400E" />
-                  </linearGradient>
-                  <linearGradient id="sacred-flame-outer" x1="30" y1="8" x2="42" y2="32" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#FF4500" />
-                    <stop offset="0.6" stopColor="#FF8C00" />
-                    <stop offset="1" stopColor="#FFD700" />
-                  </linearGradient>
-                  <linearGradient id="sacred-flame-inner" x1="33" y1="14" x2="39" y2="31" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#FFFBEB" />
-                    <stop offset="0.5" stopColor="#FEF08A" />
-                    <stop offset="1" stopColor="#F59E0B" />
-                  </linearGradient>
-                </defs>
-              </svg>
+                  <span
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      background: "rgba(0,0,0,0.65)",
+                      color: "#FFF",
+                      fontSize: "0.62rem",
+                      textAlign: "center",
+                      padding: "2px 0",
+                      fontWeight: 600,
+                    }}
+                  >
+                    नित्य दर्शन
+                  </span>
+                </div>
 
-              {status.closureMessage ? (
-                <div style={{ textAlign: "center", padding: "0 1rem" }}>
-                  <p
-                    className="text-hindi"
-                    style={{ color: "var(--color-heading)", fontSize: "1.15rem", fontWeight: 700, marginBottom: "0.25rem" }}
-                  >
-                    {status.closureMessage}
-                  </p>
+                {/* Status Text & Message */}
+                <div style={{ textAlign: "left", flex: 1 }}>
+                  {status.closureMessage ? (
+                    <div>
+                      <span
+                        style={{
+                          background: "#FFF0DE",
+                          color: "var(--color-saffron)",
+                          border: "1px solid #FED7AA",
+                          fontSize: "0.72rem",
+                          fontWeight: 700,
+                          padding: "0.2rem 0.6rem",
+                          borderRadius: "9999px",
+                          display: "inline-block",
+                          marginBottom: "0.4rem",
+                        }}
+                      >
+                        ⚠️ सूचना
+                      </span>
+                      <h3
+                        className="text-hindi"
+                        style={{ color: "var(--color-heading)", fontSize: "1.15rem", fontWeight: 700, margin: "0 0 0.25rem" }}
+                      >
+                        {status.closureMessage}
+                      </h3>
+                      <p style={{ fontSize: "0.82rem", color: "var(--color-text-secondary)", margin: 0 }}>
+                        दर्शन समय की पुष्टि मंदिर समिति से करें
+                      </p>
+                    </div>
+                  ) : (
+                    <div>
+                      <span
+                        style={{
+                          background: "#FFF0DE",
+                          color: "var(--color-saffron)",
+                          border: "1px solid #FED7AA",
+                          fontSize: "0.72rem",
+                          fontWeight: 700,
+                          padding: "0.2rem 0.6rem",
+                          borderRadius: "9999px",
+                          display: "inline-block",
+                          marginBottom: "0.4rem",
+                        }}
+                      >
+                        🚩 श्री द्वारकाधीश जी
+                      </span>
+                      <h3
+                        className="text-hindi"
+                        style={{ color: "var(--color-heading)", fontSize: "1.2rem", fontWeight: 700, margin: "0 0 0.25rem" }}
+                      >
+                        🙏 पट अभी मंगल हैं
+                      </h3>
+                      <p style={{ fontSize: "0.84rem", color: "var(--color-text-secondary)", margin: 0, lineHeight: 1.4 }}>
+                        अगली आरती के समय सीधा प्रसारण (लाइव दर्शन) आरंभ होगा।
+                      </p>
+                    </div>
+                  )}
                 </div>
-              ) : (
-                <div style={{ textAlign: "center", padding: "0 1rem" }}>
-                  <p
-                    className="text-hindi"
-                    style={{ color: "var(--color-heading)", fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.25rem" }}
-                  >
-                    🙏 पट अभी मंगल हैं
-                  </p>
-                  <p style={{ fontSize: "0.85rem", color: "var(--color-text-secondary)", margin: 0 }}>
-                    अगली आरती के समय सीधा प्रसारण आरंभ होगा
-                  </p>
-                </div>
-              )}
+              </div>
             </div>
           )}
 

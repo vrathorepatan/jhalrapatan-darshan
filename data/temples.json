@@ -15,8 +15,8 @@
     "coordinates": { "lat": 24.5544, "lng": 76.1555, "verify": true },
     "distance_from_main_km": 0,
     "google_maps_url": "https://maps.google.com/?q=Dwarkadhish+Mandir+Jhalrapatan",
-    "photo": null,
-    "photo_verify": true,
+    "photo": "/images/dwarkadhish-mandir.jpg",
+    "photo_verify": false,
     "verify": false
   },
   {

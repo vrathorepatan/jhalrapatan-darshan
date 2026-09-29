@@ -17,13 +17,49 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="container" style={{ paddingTop: "1rem" }}>
-      {/* Hero heading */}
+      {/* Hero heading with Dwarkadhish Ji Darshan Portrait */}
       <header style={{ textAlign: "center", marginBottom: "1.25rem" }}>
+        <div style={{ display: "inline-block", position: "relative", marginBottom: "0.6rem" }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/dwarkadhish.jpg"
+            alt="श्री द्वारकाधीश जी"
+            style={{
+              width: "88px",
+              height: "88px",
+              borderRadius: "50%",
+              objectFit: "cover",
+              objectPosition: "top center",
+              border: "3px solid #F59E0B",
+              boxShadow: "0 6px 20px rgba(230,81,0,0.25)",
+              display: "block",
+              margin: "0 auto",
+            }}
+          />
+          <span
+            style={{
+              position: "absolute",
+              bottom: "-4px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              background: "linear-gradient(135deg, #FF7722, #E65100)",
+              color: "#FFF",
+              fontSize: "0.68rem",
+              fontWeight: 700,
+              padding: "0.15rem 0.6rem",
+              borderRadius: "9999px",
+              whiteSpace: "nowrap",
+              boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+            }}
+          >
+            दर्शन
+          </span>
+        </div>
         <h1 style={{ fontSize: "clamp(1.3rem,4vw,1.9rem)", marginBottom: "0.25rem" }}>
-          🙏 श्री द्वारकाधीश मंदिर
+          श्री द्वारकाधीश मंदिर
         </h1>
         <p className="text-secondary" style={{ fontSize: "0.875rem" }}>
-          झालरापाटन, राजस्थान
+          झालरापाटन, राजस्थान • जय श्री कृष्णा
         </p>
       </header>
 
